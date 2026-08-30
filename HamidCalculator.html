@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ماشین حساب نیروهای امپراتوری</title>
+    <link rel="stylesheet" href="Index.css" />
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="top-header container">
+            <div class="brand-wrap">
+                <div class="brand-mark">C</div>
+                <span>Castle Tools</span>
+            </div>
+
+            <button class="header-btn" onclick="location.href='Index.html'">
+                بازگشت به صفحه اصلی
+            </button>
+        </header>
+
+        <main class="container calculator-page">
+            <section class="hero calculator-hero">
+                <div class="eyebrow">Troop Calculator</div>
+                <h1>ماشین حساب <span>نیروها</span></h1>
+                <p>
+                    تعداد نیرو را وارد کنید تا هزینه، قدرت، زمان و ارزش کل محاسبه شود.
+                </p>
+            </section>
+
+            <section class="calculator-panel">
+                <div class="panel-header">
+                    <h2>محاسبه سریع</h2>
+                </div>
+
+                <div class="form-grid">
+                    <label class="field">
+                        <span>🛡️ انتخاب نیرو</span>
+                        <select id="troop" class="styled-input">
+                            <optgroup label="⚔️ شمشیرزن">
+                                <option value="shamsherzan">🗡️ شمشیرزن</option>
+                                <option value="jonongar">😈 جنونگر</option>
+                                <option value="modafe">🛡️ مدافع</option>
+                                <option value="doshamsher">⚔️ دوشمشیره</option>
+                                <option value="negahban">🛡️ نگهبان</option>
+                                <option value="shovaliye">🐎 شوالیه</option>
+                                <option value="shekanshamsher">⚔️ شمشیرشکن</option>
+                                <option value="gard">👑 گارد سلطنتی</option>
+                                <option value="gladiator">⚔️ گلادیاتور</option>
+                            </optgroup>
+
+                            <optgroup label="🏹 کمانداران">
+                                <option value="tirandaz">🏹 تیرانداز</option>
+                                <option value="zobin">🏹 زوبین‌زن</option>
+                                <option value="shekarchi">🏹 شکارچی</option>
+                                <option value="tiratashin">🔥🏹 تیرآتشین</option>
+                                <option value="oghab">🦅 عقاب</option>
+                                <option value="kamandar">🏹 کماندار</option>
+                                <option value="zahreban">🏹 زهربان</option>
+                            </optgroup>
+
+                            <optgroup label="🗡️ نیزه‌داران">
+                                <option value="javidan">👑 جاویدان</option>
+                                <option value="hoplite">🛡️ هوپلیت</option>
+                                <option value="nizeboland">🗡️ نیزه بلند</option>
+                                <option value="nizebortab">🗡️ نیزه برتاب</option>
+                                <option value="nizeandaz">🗡️ نیزه‌انداز</option>
+                                <option value="tabarzindar">🪓 تبرزیندار</option>
+                            </optgroup>
+
+                            <optgroup label="👹 غول‌ها">
+                                <option value="dastderaz">👑 دست‌دراز غول</option>
+                                <option value="jaloot">👹 جالوت</option>
+                                <option value="zanjir">👹 زنجیرشکن</option>
+                            </optgroup>
+
+                            <optgroup label="🐎 سواره‌نظام">
+                                <option value="savarkar">🏇 سوارکار</option>
+                                <option value="savarkarSepardar">🛡️ سوارکار سپردار</option>
+                                <option value="barkesh">🏇 بارکش</option>
+                                <option value="savarnize">🏇 سوارنیزه</option>
+                                <option value="saye">🗡️ سایه‌سوار</option>
+                                <option value="zerehi">🐎 سوار نظام زرهی</option>
+                            </optgroup>
+
+                            <optgroup label="🛒 وسایل جنگی">
+                                <option value="gari">🛒 گاری</option>
+                                <option value="arabe">🏹 ارابه‌ران</option>
+                                <option value="divar">🧱 دیوار دفاعی</option>
+                            </optgroup>
+
+                            <optgroup label="🐾 حیوانات">
+                                <option value="sag">🐕 سگ شکاری</option>
+                                <option value="kargin">🦾 کارگین</option>
+                                <option value="gav">🦬 گاومیش</option>
+                                <option value="khers">🐻 خرس</option>
+                                <option value="fil">🐘 فیل</option>
+                                <option value="kargadan">🦏 کرگدن</option>
+                            </optgroup>
+
+                            <optgroup label="🪓 کولی">
+                                <option value="kuli">🦍 کولی</option>
+                                <option value="Shirdel">🦁 شیردل</option>
+                                <option value="mogul">👑 مغول</option>
+                                <option value="aztak">🦖 آتزاك</option>
+                                <option value="barbar">🪓 بربر</option>
+                            </optgroup>
+
+                            <optgroup label="👑 نیروهای ویژه">
+                                <option value="nokhbe">👑 نخبه</option>
+                                <option value="yakhzad">❄️ یخزاد</option>
+                            </optgroup>
+                        </select>
+                    </label>
+
+                    <label class="field">
+                        <span>🔢 تعداد</span>
+                        <input type="number" id="count" value="1" min="1" class="styled-input" />
+                    </label>
+                </div>
+
+                <div class="action-row">
+                    <button class="primary-btn" onclick="calculate()">محاسبه</button>
+                    <button class="secondary-btn" onclick="takeScreenshot()">ذخیره نتیجه</button>
+                </div>
+            </section>
+
+            <section id="result" class="result-box">
+                نتیجه اینجا نمایش داده می‌شود
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="Index.Js"></script>
+</body>
+
+</html>

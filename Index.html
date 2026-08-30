@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castle Tools</title>
+    <link rel="stylesheet" href="Index.css" />
+</head>
+<body>
+    <div class="page-shell">
+        <header class="top-header container">
+            <div class="brand-wrap">
+                <div class="brand-mark">AF</div>
+                <span data-i18n="brand">Hamid Tools</span>
+            </div>
+<button class="header-btn lang-toggle" id="langToggle" type="button" aria-expanded="false" aria-controls="langMenu">
+                        🌐 Language
+                    </button>
+            <nav class="socials" aria-label="Social links">
+                <div class="lang-switcher">
+                    
+                    <div class="lang-menu" id="langMenu" hidden>
+                        <button class="lang-option active" type="button" data-lang="en">English</button>
+                        <button class="lang-option" type="button" data-lang="fa">فارسی</button>
+                        <button class="lang-option" type="button" data-lang="de">Deutsch</button>
+                    </div>
+                </div>
+
+                <a class="header-btn" href="https://t.me/h4mid1383" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a class="header-btn" href="https://www.instagram.com/h4mid_fx?igsi=MTdmcjQzNWF3aDI0ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="header-btn" href="https://www.tiktok.com/@h4mid__ff?_r=1&_t=ZN-99JjXvag1xu" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </nav>
+        </header>
+
+        <main class="container main-content">
+            <section class="hero">
+                <div class="eyebrow" data-i18n="eyebrow">Castle Dashboard</div>
+                <h1 data-i18n="headline">Smart tools for <span>your castle</span></h1>
+                <p data-i18n="heroText">
+                    Fast access to troop planning, strategy support, and market insights in one clean dashboard.
+                </p>
+            </section>
+
+            <section class="tools">
+                <article class="feature-card highlight">
+                    <div class="feature-icon">⚔️</div>
+                    <div class="feature-body">
+                        <h2 data-i18n="calcTitle">Troop Calculator</h2>
+                        <p data-i18n="calcText">
+                            Calculate unit needs, resources, and strategy balance to prepare faster and smarter.
+                        </p>
+                        <button onclick="location.href='HamidCalculator.html'" class="primary-btn" data-i18n="calcBtn">Open Calculator</button>
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-body">
+                        <h2 data-i18n="signalTitle">Crypto Signals</h2>
+                        <p data-i18n="signalText">
+                            Follow market updates and quick signals for digital asset decisions in one place.
+                        </p>
+                        <button onclick="location.href='CryptoSignals.html'" class="secondary-btn" data-i18n="signalBtn">View Signals</button>
+                    </div>
+                </article>
+            </section>
+
+            <section class="anonymous-panel" id="anonymous">
+                <div class="anonymous-header">
+                    <div class="anonymous-badge">🔒</div>
+                    <div>
+                        <p class="anonymous-kicker">Private</p>
+                        <h3>Private Chat</h3>
+                    </div>
+                </div>
+
+                <div class="anonymous-body">
+                    <p>
+                        Visitors can send anonymous messages and you can reply privately in a dedicated conversation thread.
+                    </p>
+                    <button type="button" class="primary-btn" id="toggleAnonymousPanel">Open Private Chat</button>
+                </div>
+
+                <div class="anonymous-box" id="anonymousBox" hidden>
+                    <div class="chat-layout">
+                        <form id="anonymousForm" class="anonymous-form">
+                            <label class="field" for="anonymousMessage">
+                                <span>Write anonymous message</span>
+                                <textarea id="anonymousMessage" class="styled-input anonymous-textarea" placeholder="Type a private message here..." required></textarea>
+                            </label>
+
+                            <div class="action-row">
+                                <button type="submit" class="primary-btn">Send to Admin</button>
+                                <button type="button" class="secondary-btn" id="closeAnonymousPanel">Close</button>
+                            </div>
+                        </form>
+
+                        <div class="message-inbox">
+                            <h4>Inbox</h4>
+                            <div id="anonymousMessagesList" class="anonymous-messages"></div>
+                        </div>
+                    </div>
+
+                    <div class="reply-panel" id="replyPanel" hidden>
+                        <div class="reply-header">
+                            <h4 id="replyThreadTitle">Private conversation</h4>
+                        </div>
+
+                        <div id="replyThreadMessages" class="reply-thread-messages"></div>
+
+                        <form id="adminReplyForm" class="admin-reply-form">
+                            <textarea id="adminReply" class="styled-input anonymous-textarea" placeholder="Write your reply here..." required></textarea>
+                            <div class="action-row">
+                                <button type="submit" class="primary-btn">Send Reply</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="support-panel">
+                <div class="support-header">
+                    <div class="support-badge">💬</div>
+                    <div>
+                        <p class="anonymous-kicker" data-i18n="supportKicker">Support</p>
+                        <h3 data-i18n="supportTitle">Contact and Support</h3>
+                    </div>
+                </div>
+
+                <div class="support-body">
+                    <div class="support-copy">
+                        <p class="status-note" data-i18n="supportNotice">
+                            This website is not completed yet. Our team is doing their best to improve it and add more features every day.
+                        </p>
+                        <div class="support-actions">
+                            <a class="header-btn" href="https://www.instagram.com/h4mid_fx?igsi=MTdmcjQzNWF3aDI0ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a class="header-btn" href="https://www.tiktok.com/@h4mid1383" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                brand: 'Hamid Tools',
+                eyebrow: 'Dashboard',
+                headline: 'Smart tools for <span>your castle</span>',
+                heroText: 'Fast access to troop planning, strategy support, and market insights in one clean dashboard.',
+                calcTitle: 'Troop Calculator',
+                calcText: 'Calculate unit needs, resources, and strategy balance to prepare faster and smarter.',
+                calcBtn: 'Open Calculator',
+                signalTitle: 'Crypto Signals',
+                signalText: 'Follow market updates and quick signals for digital asset decisions in one place.',
+                signalBtn: 'View Signals',
+                supportKicker: 'Support',
+                supportTitle: 'Contact and Support',
+                supportNotice: 'This website is not completed yet. Our team is doing their best to improve it and add more features every day.',
+                langLabel: '🌐 Language'
+            },
+            fa: {
+                brand: 'Castle Tools',
+                eyebrow: 'داشبورد قلعه',
+                headline: 'ابزارهای هوشمند برای <span>قلعه شما</span>',
+                heroText: 'دسترسی سریع به برنامه‌ریزی نیرو، پشتیبانی از استراتژی و دیدگاه‌های بازار در یک داشبورد ساده.',
+                calcTitle: 'ماشین‌حساب نیروها',
+                calcText: 'نیازهای واحدها، منابع و تعادل استراتژی را محاسبه کنید تا سریع‌تر و هوشمندتر آماده شوید.',
+                calcBtn: 'باز کردن ماشین‌حساب',
+                signalTitle: 'سیگنال‌های ارز دیجیتال',
+                signalText: 'به‌روزرسانی‌های بازار و سیگنال‌های سریع را در یک جا دنبال کنید.',
+                signalBtn: 'مشاهده سیگنال‌ها',
+                supportKicker: 'پشتیبانی',
+                supportTitle: 'تماس و پشتیبانی',
+                supportNotice: 'این وب‌سایت هنوز تکمیل نشده است. تیم ما بهترین تلاش خود را برای بهبود آن و اضافه کردن امکانات بیشتر انجام می‌دهد.',
+                langLabel: '🌐 زبان'
+            },
+            de: {
+                brand: 'Castle Tools',
+                eyebrow: 'Castle Dashboard',
+                headline: 'Intelligente Tools für <span>dein Schloss</span>',
+                heroText: 'Schneller Zugriff auf Truppenplanung, Strategieunterstützung und Marktanalysen in einem übersichtlichen Dashboard.',
+                calcTitle: 'Truppenrechner',
+                calcText: 'Berechne Einheitenbedarf, Ressourcen und Strategiebalance für schnellere und intelligentere Vorbereitung.',
+                calcBtn: 'Rechner öffnen',
+                signalTitle: 'Krypto-Signale',
+                signalText: 'Verfolge Marktupdates und schnelle Signale für digitale Asset-Entscheidungen an einem Ort.',
+                signalBtn: 'Signale ansehen',
+                supportKicker: 'Support',
+                supportTitle: 'Kontakt und Support',
+                supportNotice: 'Diese Website ist noch nicht abgeschlossen. Unser Team gibt sein Bestes, um sie zu verbessern und täglich mehr Funktionen hinzuzufügen.',
+                langLabel: '🌐 Sprache'
+            }
+        };
+
+        const langToggle = document.getElementById('langToggle');
+        const langMenu = document.getElementById('langMenu');
+        const langButtons = document.querySelectorAll('.lang-option');
+        const anonymousToggle = document.getElementById('toggleAnonymousPanel');
+        const anonymousBox = document.getElementById('anonymousBox');
+        const closeAnonymousPanel = document.getElementById('closeAnonymousPanel');
+        const anonymousForm = document.getElementById('anonymousForm');
+        const anonymousMessage = document.getElementById('anonymousMessage');
+        const anonymousMessagesList = document.getElementById('anonymousMessagesList');
+        const replyPanel = document.getElementById('replyPanel');
+        const replyThreadMessages = document.getElementById('replyThreadMessages');
+        const replyThreadTitle = document.getElementById('replyThreadTitle');
+        const adminReplyForm = document.getElementById('adminReplyForm');
+        const adminReply = document.getElementById('adminReply');
+        const STORAGE_KEY = 'castlePrivateChat';
+        let selectedThreadId = null;
+
+        function escapeHtml(value) {
+            return value
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function createId() {
+            return Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+        }
+
+        function getMessages() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                return saved ? JSON.parse(saved) : [];
+            } catch (error) {
+                return [];
+            }
+        }
+
+        function saveMessages(messages) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+        }
+
+        function getSelectedThread() {
+            const messages = getMessages();
+            return messages.find((message) => message.id === selectedThreadId) || null;
+        }
+
+        function renderReplyThread() {
+            const thread = getSelectedThread();
+
+            if (!thread) {
+                replyPanel.hidden = true;
+                return;
+            }
+
+            replyThreadTitle.textContent = `Private Chat #${thread.id.slice(-4)}`;
+            replyThreadMessages.innerHTML = thread.messages.map((item) => {
+                const direction = item.sender === 'admin' ? 'admin' : 'visitor';
+                const label = item.sender === 'admin' ? 'Admin' : 'Visitor';
+                return `
+                    <div class="thread-message ${direction}">
+                        <div class="thread-label">${label}</div>
+                        <p>${escapeHtml(item.text)}</p>
+                        <span>${new Date(item.date).toLocaleString()}</span>
+                    </div>
+                `;
+            }).join('');
+
+            replyPanel.hidden = false;
+        }
+
+        function renderMessages() {
+            const messages = getMessages();
+
+            if (!messages.length) {
+                anonymousMessagesList.innerHTML = '<p class="empty-state">No private messages yet.</p>';
+                replyPanel.hidden = true;
+                selectedThreadId = null;
+                return;
+            }
+
+            if (!selectedThreadId || !messages.some((message) => message.id === selectedThreadId)) {
+                selectedThreadId = messages[0].id;
+            }
+
+            anonymousMessagesList.innerHTML = messages.map((message) => {
+                const firstMessage = message.messages[0];
+                const date = new Date(firstMessage.date).toLocaleString();
+                const activeClass = message.id === selectedThreadId ? 'active' : '';
+
+                return `
+                    <article class="message-item ${activeClass}" data-thread-id="${message.id}">
+                        <div class="message-meta">Private Chat • ${date}</div>
+                        <p>${escapeHtml(firstMessage.text)}</p>
+                    </article>
+                `;
+            }).join('');
+
+            anonymousMessagesList.querySelectorAll('.message-item').forEach((item) => {
+                item.addEventListener('click', () => {
+                    selectedThreadId = item.dataset.threadId;
+                    renderMessages();
+                    renderReplyThread();
+                });
+            });
+
+            renderReplyThread();
+        }
+
+        anonymousToggle.addEventListener('click', () => {
+            anonymousBox.hidden = !anonymousBox.hidden;
+        });
+
+        closeAnonymousPanel.addEventListener('click', () => {
+            anonymousBox.hidden = true;
+        });
+
+        anonymousForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const text = anonymousMessage.value.trim();
+
+            if (!text) {
+                return;
+            }
+
+            const messages = getMessages();
+            const thread = {
+                id: createId(),
+                messages: [{
+                    id: createId(),
+                    sender: 'visitor',
+                    text,
+                    date: new Date().toISOString()
+                }]
+            };
+
+            messages.unshift(thread);
+            saveMessages(messages);
+            selectedThreadId = thread.id;
+            anonymousForm.reset();
+            renderMessages();
+        });
+
+        adminReplyForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const thread = getSelectedThread();
+            const text = adminReply.value.trim();
+
+            if (!thread || !text) {
+                return;
+            }
+
+            const messages = getMessages();
+            const target = messages.find((item) => item.id === thread.id);
+
+            if (!target) {
+                return;
+            }
+
+            target.messages.push({
+                id: createId(),
+                sender: 'admin',
+                text,
+                date: new Date().toISOString()
+            });
+
+            saveMessages(messages);
+            adminReplyForm.reset();
+            renderMessages();
+        });
+
+        function setLanguage(lang) {
+            const current = translations[lang] || translations.en;
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                const key = el.dataset.i18n;
+                if (current[key]) {
+                    el.innerHTML = current[key];
+                }
+            });
+
+            langToggle.textContent = current.langLabel;
+            langButtons.forEach((button) => {
+                button.classList.toggle('active', button.dataset.lang === lang);
+            });
+
+            if (lang === 'fa') {
+                document.querySelector('.page-shell').setAttribute('dir', 'rtl');
+            } else {
+                document.querySelector('.page-shell').removeAttribute('dir');
+            }
+        }
+
+        langToggle.addEventListener('click', () => {
+            const isHidden = langMenu.hasAttribute('hidden');
+            if (isHidden) {
+                langMenu.removeAttribute('hidden');
+                langToggle.setAttribute('aria-expanded', 'true');
+            } else {
+                langMenu.setAttribute('hidden', 'hidden');
+                langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.lang-switcher')) {
+                langMenu.setAttribute('hidden', 'hidden');
+                langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        langButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                setLanguage(button.dataset.lang);
+                langMenu.setAttribute('hidden', 'hidden');
+                langToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        renderMessages();
+        setLanguage('en');
+    </script>
+</body>
+</html>
