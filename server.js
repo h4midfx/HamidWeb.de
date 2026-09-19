@@ -5,6 +5,7 @@ const { handlePortal } = require('./PortalBackend');
 
 const PORT = Number(process.env.PORT) || 3000;
 const publicFiles = new Set([
+    'Games.html', 'Games.css', 'Games.js',
     'index.html', 'Index.css', 'Index.Js', 'HamidCalculator.html',
     'CryptoSignals.html', 'SignalEngine.js', 'SignalMarket.js', 'RandomPositions.js', 'RandomPositions.css', 'SignalScanner.js', 'SignalScanner.css', 'CryptoSignals.js', 'CryptoSignals.css', 'SocialPortal.html', 'SocialPortal.css', 'SocialPortal.js'
 ]);

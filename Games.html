@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>اتاق بازی | قلعه</title>
+  <link rel="stylesheet" href="Index.css">
+  <link rel="stylesheet" href="Games.css">
+  <script src="Games.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="top-header container">
+      <div class="brand-wrap"><div class="brand-mark">♜</div><span>اتاق بازی قلعه</span></div>
+      <a class="header-btn" href="index.html">بازگشت به داشبورد</a>
+    </header>
+    <main class="container games-main">
+      <section class="games-intro"><div class="eyebrow">کمی استراحت، کمی چالش</div><h1>وقت <span>بازی</span> است!</h1><p>سه بازی کوتاه برای تمرکز، حافظه و سرعت؛ با لمس صفحه یا صفحه‌کلید بازی کنید.</p></section>
+      <nav class="game-picker" aria-label="انتخاب بازی">
+        <button type="button" data-game="tic" aria-pressed="true" aria-controls="tic"><span aria-hidden="true">✕ ◯</span>دوز<span class="game-description">رقابت با رایانه</span></button>
+        <button type="button" data-game="memory" aria-pressed="false" aria-controls="memory"><span aria-hidden="true">◆</span>جفت‌یابی<span class="game-description">حافظه‌ات را امتحان کن</span></button>
+        <button type="button" data-game="reaction" aria-pressed="false" aria-controls="reaction"><span aria-hidden="true">ϟ</span>سرعت واکنش<span class="game-description">چقدر سریع هستی؟</span></button>
+      </nav>
+      <section class="game-panel" id="tic" aria-labelledby="tic-title">
+        <div class="game-heading"><div><h2 id="tic-title">دوز</h2><p>شما × هستید. سه علامت در یک ردیف، ستون یا قطر بچینید.</p></div><button class="header-btn" id="tic-reset">بازی تازه</button></div>
+        <p class="game-status" id="tic-status" role="status"></p>
+        <div class="tic-board" id="tic-board" aria-label="صفحه دوز"></div>
+        <p class="game-hint">رایانه با بهترین حرکت پاسخ می‌دهد؛ تساوی هم نتیجه خوبی است!</p>
+      </section>
+      <section class="game-panel" id="memory" aria-labelledby="memory-title" hidden>
+        <div class="game-heading"><div><h2 id="memory-title">جفت‌یابی</h2><p>کارت‌ها را برگردانید و هشت جفت یکسان پیدا کنید.</p></div><button class="header-btn" id="memory-reset">چیدمان تازه</button></div>
+        <p class="game-status" id="memory-status" role="status"></p>
+        <div class="memory-board" id="memory-board" aria-label="کارت‌های حافظه"></div>
+      </section>
+      <section class="game-panel" id="reaction" aria-labelledby="reaction-title" hidden>
+        <div class="game-heading"><div><h2 id="reaction-title">سرعت واکنش</h2><p>شروع کنید، منتظر سبز شدن بمانید و سپس دکمه را بزنید.</p></div></div>
+        <p class="game-status" id="reaction-status" role="status">آماده‌اید؟</p>
+        <button class="reaction-pad" id="reaction-pad" data-state="idle">شروع آزمون</button>
+        <p class="game-hint" id="reaction-best">با لمس، کلیک یا کلید فاصله بازی کنید.</p>
+      </section>
+      <p class="games-footer">رایگان و بدون نیاز به ثبت‌نام · رکورد واکنش در همین مرورگر ذخیره می‌شود.</p>
+    </main>
+  </div>
+</body>
+</html>

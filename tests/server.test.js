@@ -23,6 +23,11 @@ test('remaining website pages load and private files stay inaccessible', { timeo
         server.once('exit', code => reject(Error(`Server exited ${code}`)));
     });
     const origin = `http://127.0.0.1:${port}`;
+    for (const asset of ['Games.html', 'Games.css', 'Games.js']) {
+        const response = await fetch(`${origin}/${asset}`);
+        assert.equal(response.status, 200, asset);
+        assert.ok((await response.text()).length > 0);
+    }
     for (const route of ['/', '/index.html', '/Index.html', '/Index.css', '/Index.Js', '/HamidCalculator.html', '/CryptoSignals.html', '/CryptoSignals.css', '/CryptoSignals.js', '/SignalMarket.js', '/RandomPositions.js', '/RandomPositions.css', '/SignalScanner.js', '/SignalScanner.css', '/SignalEngine.js', '/SocialPortal.html', '/SocialPortal.css', '/SocialPortal.js']) {
         const response = await fetch(origin + route);
         assert.equal(response.status, 200, route);
